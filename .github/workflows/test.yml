@@ -21,10 +21,10 @@ jobs:
     - uses: purcell/setup-emacs@master
       with:
         version: ${{ matrix.emacs_version }}
+    - uses: actions/checkout@v2
     - uses: leotaku/elisp-check@master
       with:
         file: '*.el'
         ignore_warnings: true
-    - uses: actions/checkout@v2
     - name: Byte Compile
       run: make compile
