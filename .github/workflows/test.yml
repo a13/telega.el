@@ -24,7 +24,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: leotaku/elisp-check@master
       with:
-        file: '*.el'
+        file: 'telega.el'
         ignore_warnings: true
     - name: Byte Compile
       run: make compile
